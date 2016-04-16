@@ -86,9 +86,9 @@ fos_user:
     user_class: Aved\UserBundle\Entity\User
     registration:
         form:
-            # type: AppBundle\Form\RegistrationType
+            type: AppBundle\Form\RegistrationType
             # if you are using Symfony < 2.8 you should use the type name instead
-            type: app_user_registration
+            # type: app_user_registration
 
 knp_paginator:
     page_range: 5                      # default page range used in pagination control
