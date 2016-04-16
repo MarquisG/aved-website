@@ -1,0 +1,10 @@
+aved_blog:
+    resource: "@AvedBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+aved:
+    resource: "@AvedPageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

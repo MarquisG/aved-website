@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="breadcrumbs" class="grey_section bg_image">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1>
+                        Page <strong>Campus</strong>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="{{ path('aved_homepage') }}">Accueil</a>
+                        </li>
+                        <li class="active">Campus</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="light_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="side-item">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="item-media">
+                                    <img src="{{ asset('example/team/03.jpeg') }}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="item-content right">
+                                    <h2>Le campus Descartes</h2>
+                                    <p>
+                                        Le campus Descartes est le plus grand pôle d’enseignement supérieur et de recherche de l’est parisien, il a été désigné comme cluster du futur Grand Paris. Elle se situe près de la gare RER de noisy-champ. Il compte notamment plusieurs écoles d’ingénieur, une faculté avec plus d’une dizaine de domaines enseignés, et un incubateur de jeunes sociétés. Cette cité se positionne comme l’une des pièces maîtresses du développement des innovations de demain. 
+                                    </p>
+                                    <div class="border-paragraphs">
+                                        <p> <i class="highlight rt-icon-book2"></i> <strong><a href="{{ path('aved_ecole') }}">Les écoles</a></strong>
+                                        </p>
+                                        <p> <i class="highlight rt-icon-users"></i> <strong><a href="{{ path('aved_association') }}">Les Associations</a></strong>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

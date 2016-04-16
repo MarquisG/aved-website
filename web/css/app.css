@@ -1,0 +1,21 @@
+@media (max-width: 767px) {
+  	a[class^="socialico-"] {
+    	display:none;
+  	}
+}
+@media (min-width: 767px) {
+	.sf-menu > li > ul {
+	    margin-left: -21px;
+	}
+}
+@media (min-width: 991px) and (max-width: 1132px) {
+	.sf-menu > li > a {
+	    padding: 20px 18px 20px 18px;
+	}
+}
+
+@media (max-width: 991px) and (min-width: 770px) {
+	.sf-menu > li > a {
+	    padding: 20px 9px 20px 9px;
+	}
+}

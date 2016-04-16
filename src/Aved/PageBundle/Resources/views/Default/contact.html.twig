@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section id="breadcrumbs" class="grey_section bg_image">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1><strong>Nous</strong>
+                    Contacter
+                </h1>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="{{ path('aved_homepage') }}">Accueil</a>
+                    </li>
+                    <li class="active">Contact</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="light_section">
+    <div class="container" style="padding-top:40px">
+        <div class="row">
+            <div class="col-sm-12 text-center to_animate" data-animation="expandOpen">
+                <h3>
+                    <a href="mailto:asso.aved@gmail.com">ASSO.AVED@GMAIL.COM</a>
+                </h3>
+                <h2 class="section_header big">
+                    <span class="highlight"> <strong>+33 6 12 34 56 78</strong>
+                    </span>
+                </h2>
+                <p>10 Bd Blaise Pascal, 77420 Champs-sur-Marne</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-push-3 to_animate">
+                <form class="contact-form" method="post" action="/">
+                    <p class="contact-form-name">
+                        <label for="name">
+                            Nom Prénom
+                            <span class="required">*</span>
+                        </label>
+                        <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control text-center" placeholder="Nom Prénom"></p>
+                    <p class="contact-form-email">
+                        <label for="email">
+                            Adresse mail
+                            <span class="required">*</span>
+                        </label>
+                        <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control text-center" placeholder="Email"></p>
+                    <p class="contact-form-message">
+                        <label for="message">Message</label>
+                        <textarea aria-required="true" rows="8" cols="45" name="message" id="message" class="form-control text-center" placeholder="Message"></textarea>
+                    </p>
+                    <p class="contact-form-submit text-center topmargin40">
+                        <button type="reset" class="theme_button inverse">Effacer</button>
+                        <button type="submit" id="contact_form_submit" name="contact_submit" class="theme_button">Envoyer</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

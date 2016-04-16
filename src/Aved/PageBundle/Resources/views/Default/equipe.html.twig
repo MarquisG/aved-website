@@ -1,0 +1,185 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section id="breadcrumbs" class="grey_section bg_image">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1><strong>L'équipe</strong>
+                </h1>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="{{ path('aved_homepage') }}">Accueil</a>
+                    </li>
+                    <li class="active">Trombinoscope</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="folio" class="light_section gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div id="isotope_filters">
+                    <a href="#" data-filter="*" class="selected">Tout</a>
+                    <a href="#" data-filter=".UPEM">Université Paris Est MLV</a>
+                    <a href="#" data-filter=".ESIEE">Esiee Paris</a>
+                    <a href="#" data-filter=".PONT">Ecole Nationale des Ponts et chaussées</a>
+					<a href="#" data-filter=".ESO">ESO Suposteo</a>
+					<a href="#" data-filter=".ARCHI">Ecole d'architecture des villes & des territoires</a>
+                </div>
+
+                <div id="isotope_container" class="isotope row">
+				
+                    <div class="isotope-item gallery-item padding-item col-md-4 col-sm-10 ARCHI">
+                        <div>
+                            <div class="gallery-image">
+                                <img src="{{ asset('example/trombinoscope/Respo_ARCHI.png') }}" alt="">
+                                <div class="gallery-image-links">
+                                    <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/trombinoscope/Respo_ARCHI.png') }}"></a>
+                                    <a class="p-link" title="" href="gallery-single.html"></a>
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3>
+                                    <a href="gallery-single.html">Respo_ARCHI</a>
+                                </h3>
+                                <p class="gallery-meta">
+                                    <a href="portfolio.html">Media</a>
+                                    ,
+                                    <a href="portfolio.html">Web design</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 ESIEE">
+                        <div>
+                            <div class="gallery-image">
+                                <img src="{{ asset('example/trombinoscope/Respo_ESIEE.png') }}" alt="">
+                                <div class="gallery-image-links">
+                                    <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/trombinoscope/Respo_ESIEE.png') }}"></a>
+                                    <a class="p-link" title="" href="gallery-single.html"></a>
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3>
+                                    <a href="gallery-single.html">Respo_ESIEE</a>
+                                </h3>
+                                <p class="gallery-meta">
+                                    <a href="portfolio.html">Media</a>
+                                    ,
+                                    <a href="portfolio.html">Web design</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 ESO">
+                        <div>
+                            <div class="gallery-image">
+                                <img src="{{ asset('example/trombinoscope/Respo_ESO.png') }}" alt="">
+                                <div class="gallery-image-links">
+                                    <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/trombinoscope/Respo_ESO.png') }}"></a>
+                                    <a class="p-link" title="" href="gallery-single.html"></a>
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3>
+                                    <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                </h3>
+                                <p class="gallery-meta">
+                                    <a href="portfolio.html">Media</a>
+                                    ,
+                                    <a href="portfolio.html">Web design</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 PONT">
+                        <div>
+                            <div class="gallery-image">
+                                <img src="{{ asset('example/trombinoscope/Respo_PONT.png') }}" alt="">
+                                <div class="gallery-image-links">
+                                    <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/trombinoscope/Respo_PONT.png') }}"></a>
+                                    <a class="p-link" title="" href="gallery-single.html"></a>
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3>
+                                    <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                </h3>
+                                <p class="gallery-meta">
+                                    <a href="portfolio.html">Media</a>
+                                    ,
+                                    <a href="portfolio.html">Web design</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 UPEM">
+                        <div>
+                            <div class="gallery-image">
+                                <img src="{{ asset('example/trombinoscope/Respo_UPEM.png') }}" alt="">
+                                <div class="gallery-image-links">
+                                    <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/trombinoscope/Respo_UPEM.png') }}"></a>
+                                    <a class="p-link" title="" href="gallery-single.html"></a>
+                                </div>
+                            </div>
+                            <div class="gallery-item-description">
+                                <h3>
+                                    <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                </h3>
+                                <p class="gallery-meta">
+                                    <a href="portfolio.html">Media</a>
+                                    ,
+                                    <a href="portfolio.html">Web design</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+<!--         <div class="row">
+            <div class="col-sm-12 text-center">
+                <ul class="pagination">
+                    <li>
+                        <a href="#"> <i class="arrow-icon-left-open-3"></i>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="arrow-icon-right-open-3"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}- Calendrier des événements{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/fullcalendar.min.css') }}">
+{% endblock %}
+
+{% block body %}
+	<section id="breadcrumbs" class="grey_section bg_image">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-sm-12 text-center">
+	                <h1>
+	                    Page <strong>Calendrier</strong>
+	                </h1>
+	                <ol class="breadcrumb">
+	                    <li>
+	                        <a href="{{ path('aved_homepage') }}">Accueil</a>
+	                    </li>
+	                    <li class="active">Calendrier</li>
+	                </ol>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div id="calendar"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/fullcalendar.min.js') }}"></script>
+    <script>
+    	   	$(function(){
+			$('#calendar').fullCalendar({
+			    header: {
+			        left: 'prev,next today',
+			        center: 'title',
+			        right: 'month,agendaWeek,agendaDay'
+			    },
+			    monthNames: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			    monthNamesShort: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aoû', 'Sep', 'Oct', 'Nov', 'Dec'],
+			    dayNamesShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+			    dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			    buttonText: {
+				    today:    'aujourd\'hui',
+				    month:    'mois',
+				    week:     'semaine',
+				    day:      'jour'
+				},
+				titleFormat: {
+				    day: 'dddd d MMM, yyyy',
+				    week: "d[ MMM yyyy]{ '&#8212;' d MMM yyyy}",
+				},
+			    firstDay: 1,
+			    weekNumbers: true,
+			    axisFormat: "H'h'(mm)",
+			    timeFormat: {
+				    // for agendaWeek and agendaDay
+				    agenda: 'H:mm{ - H:mm}', // 5:00 - 6:30
+
+				    // for all other views
+				    '': "H'h'(mm)"
+				},
+			    slotMinutes: 60,
+			    allDaySlot: false,
+			    events: {{ events|json_encode()|raw }},
+			});
+    	});
+    </script>
+{% endblock %}

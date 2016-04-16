@@ -1,0 +1,64 @@
+<section id="breadcrumbs" class="grey_section bg_image">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>
+                    <strong>Inscription</strong>
+                </h1>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="{{ path('aved_homepage') }}">Accueil</a>
+                    </li>
+                    <li class="active">Inscription</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-push-2 to_animate">
+			<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register form-horizontal">
+			    <div class="form-group"><br><br><br>
+			      	<label for="username" class="col-lg-3 control-label">Utilisateur</label>
+			      	<div class="col-lg-8">
+			        	{{ form_widget(form.username, {'attr': {'class': 'form-control text-center'}}) }}
+			      	</div>
+			    </div>
+			    <div class="form-group">
+			      	<label for="username" class="col-lg-3 control-label">Email</label>
+			      	<div class="col-lg-8">
+			        	{{ form_widget(form.email, {'attr': {'class': 'form-control text-center'}}) }}
+			      	</div>
+			    </div>
+			    <div class="form-group">
+			      	<label for="password" class="col-lg-3 control-label">Mot de passe</label>
+			      	<div class="col-lg-8">
+						{{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control text-center'}}) }}
+					</div>
+			    </div>
+			    <div class="form-group">
+			      	<label for="password" class="col-lg-3 control-label">Vérification</label>
+			      	<div class="col-lg-8">
+						{{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control text-center'}}) }}
+					</div>
+			    </div>
+			    <br>
+			    <div class="form-group">
+			      	<label for="school" class="col-lg-3 control-label">Ecole/Université</label>
+			      	<div class="col-lg-8">
+			        	{{ form_widget(form.school, {'attr': {'class': 'form-control text-center'}}) }}
+			      	</div>
+			    </div>
+			    {{ form_rest(form) }}
+			    <br>
+			    <div class="form-group">
+			      	<div class="col-lg-10 col-lg-offset-3"><br>
+			      		<input class="theme_button" type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
+			      		<br><br><br>
+			      	</div>
+			    </div>
+			</form>
+		</div>
+	</div>
+</div>

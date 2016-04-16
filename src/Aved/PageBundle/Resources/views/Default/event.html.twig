@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="breadcrumbs" class="grey_section bg_image">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1>
+                        Page <strong>Evénements</strong>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="{{ path('aved_homepage') }}">Accueil</a>
+                        </li>
+                        <li class="active">Evénements</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="content" class="light_section blog left-sidebar">
+        <div class="container">
+            <div class="row">
+                <!-- main content -->
+                <div class="col-sm-8 col-md-8 col-lg-9 col-sm-push-4 col-md-push-4 col-lg-push-3">
+                    {% for event in pagination %}
+                        <article class="side-item events-grid to_animate">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="item-media">
+                                        <img src="{{ asset(''~event.thumbnail) }}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="item-content right">
+                                        <h2>
+                                            <a href="{{ path('aved_event_detail', {id:event.id}) }}">{{ event.title }}</a>
+                                        </h2>
+                                        <p>
+                                            {{ event.description|length > 200 ? event.description|slice(0, 200) ~ '...' : event.description }}
+                                        </p>
+                                        <div class="entry-tags">
+                                            <span class="event-date grey"> <i class="rt-icon-calendar3 highlight"></i>
+                                                <time datetime="2013-04-06T15:05:23+00:00">{{ event.start|date("d/m/y") }} - {{ event.end|date("d/m/y") }}</time>
+                                            </span>
+                                            <span class="event-place grey"> <i class="rt-icon-location highlight"></i>
+                                                {{ event.place }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    {% endfor %}<br>
+                    <div class="navigation text-center">
+                        {% do pagination.setTemplate('AvedBlogBundle:Default:pagination.html.twig') %}
+                        {{ knp_pagination_render(pagination) }}
+                    </div>
+                </div>
+                <!--eof col-sm-9 (main content)-->
+                <!-- Sidebar -->
+                <aside class="col-sm-4 col-md-4 col-lg-3 col-sm-pull-8 col-md-8 col-lg-pull-9">
+                    <div class="widget widget_categories">
+                        <h3 class="widget-title">Prochains events</h3>
+                        <ul>
+                            {% for event in events %}
+                                {% if "now"|date('Ymd') < event.start|date("Ymd") %}
+                                    <li>
+                                        <a href="#" title="">{{ event.title }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </aside>
+                <!-- eof sidebar --> 
+            </div>
+        </div>
+    </section>
+{% endblock %}

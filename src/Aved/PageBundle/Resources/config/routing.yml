@@ -1,0 +1,51 @@
+aved_homepage:
+    path:     /
+    defaults: { _controller: AvedPageBundle:Default:index }
+
+aved_event:
+    path:     /evenement/
+    defaults: { _controller: AvedPageBundle:Default:event }
+
+aved_galerie:
+    path:     /galerie/
+    defaults: { _controller: AvedPageBundle:Default:galerie }
+
+aved_contact:
+    path:     /contact/
+    defaults: { _controller: AvedPageBundle:Default:contact }
+
+aved_campus:
+    path:     /campus/
+    defaults: { _controller: AvedPageBundle:Default:campus }
+
+aved_event_detail:
+    path:     /evenement/{id}/
+    defaults: { _controller: AvedPageBundle:Default:eventdetail }
+
+aved_pimp:
+    path:     /pimp-my-descartes/
+    defaults: { _controller: AvedPageBundle:Default:pimp }
+
+aved_map:
+    path:     /carte/
+    defaults: { _controller: AvedPageBundle:Default:map }
+
+aved_ecole:
+    path:     /les-ecoles/
+    defaults: { _controller: AvedPageBundle:Default:ecole }
+
+aved_association:
+    path:     /les-associations/
+    defaults: { _controller: AvedPageBundle:Default:association }
+
+aved_equipe:
+    path:     /equipe/
+    defaults: { _controller: AvedPageBundle:Default:equipe}
+
+aved_news:
+    path:     /news/
+    defaults: { _controller: AvedPageBundle:Default:news}
+
+aved_news_detail:
+    path:     /news/{id}/
+    defaults: { _controller: AvedPageBundle:Default:newsdetail}

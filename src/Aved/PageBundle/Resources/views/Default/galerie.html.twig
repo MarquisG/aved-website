@@ -1,0 +1,274 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="breadcrumbs" class="grey_section bg_image">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1><strong>Galerie</strong>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="{{ path('aved_homepage') }}">Accueil</a>
+                        </li>
+                        <li class="active">Galerie Photo</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="folio" class="light_section gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="isotope_filters">
+                        <a href="#" data-filter="*" class="selected">Tout</a>
+                        {% for event in events %}
+                            <a href="#" data-filter=".webdesign">{{ event.title }}</a>
+                        {% endfor %}
+                        <a href="#" data-filter=".development">Trophée Descartes 2014</a>
+                        <a href="#" data-filter=".photography">Pimp My Descartes</a>
+                    </div>
+                    <div id="isotope_container" class="isotope row">
+                        <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 webdesign photography">
+                            <div>
+                                <div class="gallery-image">
+                                    <img src="{{ asset('example/gallery/01.jpg') }}" alt="">
+                                    <div class="gallery-image-links">
+                                        <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/gallery/01.jpg') }}"></a>
+                                        <a class="p-link" title="" href="gallery-single.html"></a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item-description">
+                                    <h3>
+                                        <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                    </h3>
+                                    <p class="gallery-meta">
+                                        <a href="portfolio.html">Media</a>
+                                        ,
+                                        <a href="portfolio.html">Web design</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 photography webdesign">
+                            <div>
+                                <div class="gallery-image">
+                                    <img src="{{ asset('example/gallery/02.jpg') }}" alt="">
+                                    <div class="gallery-image-links">
+                                        <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/gallery/02.jpg') }}"></a>
+                                        <a class="p-link" title="" href="gallery-single.html"></a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item-description">
+                                    <h3>
+                                        <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                    </h3>
+                                    <p class="gallery-meta">
+                                        <a href="portfolio.html">Media</a>
+                                        ,
+                                        <a href="portfolio.html">Web design</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 development">
+                            <div>
+                                <div class="gallery-image">
+                                    <img src="{{ asset('example/gallery/03.jpg') }}" alt="">
+                                    <div class="gallery-image-links">
+                                        <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/gallery/03.jpg') }}"></a>
+                                        <a class="p-link" title="" href="gallery-single.html"></a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item-description">
+                                    <h3>
+                                        <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                    </h3>
+                                    <p class="gallery-meta">
+                                        <a href="portfolio.html">Media</a>
+                                        ,
+                                        <a href="portfolio.html">Web design</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 development">
+                            <div>
+                                <div class="gallery-image">
+                                    <img src="{{ asset('example/gallery/04.jpg') }}" alt="">
+                                    <div class="gallery-image-links">
+                                        <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/gallery/04.jpg') }}"></a>
+                                        <a class="p-link" title="" href="gallery-single.html"></a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item-description">
+                                    <h3>
+                                        <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                    </h3>
+                                    <p class="gallery-meta">
+                                        <a href="portfolio.html">Media</a>
+                                        ,
+                                        <a href="portfolio.html">Web design</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 webdesign">
+                            <div>
+                                <div class="gallery-image">
+                                    <img src="{{ asset('example/gallery/05.jpg') }}" alt="">
+                                    <div class="gallery-image-links">
+                                        <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/gallery/05.jpg') }}"></a>
+                                        <a class="p-link" title="" href="gallery-single.html"></a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item-description">
+                                    <h3>
+                                        <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                    </h3>
+                                    <p class="gallery-meta">
+                                        <a href="portfolio.html">Media</a>
+                                        ,
+                                        <a href="portfolio.html">Web design</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 photography">
+                            <div>
+                                <div class="gallery-image">
+                                    <img src="{{ asset('example/gallery/06.jpg') }}" alt="">
+                                    <div class="gallery-image-links">
+                                        <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/gallery/06.jpg') }}"></a>
+                                        <a class="p-link" title="" href="gallery-single.html"></a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item-description">
+                                    <h3>
+                                        <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                    </h3>
+                                    <p class="gallery-meta">
+                                        <a href="portfolio.html">Media</a>
+                                        ,
+                                        <a href="portfolio.html">Web design</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 development programming">
+                            <div>
+                                <div class="gallery-image">
+                                    <img src="{{ asset('example/gallery/07.jpg') }}" alt="">
+                                    <div class="gallery-image-links">
+                                        <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/gallery/07.jpg') }}"></a>
+                                        <a class="p-link" title="" href="gallery-single.html"></a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item-description">
+                                    <h3>
+                                        <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                    </h3>
+                                    <p class="gallery-meta">
+                                        <a href="portfolio.html">Media</a>
+                                        ,
+                                        <a href="portfolio.html">Web design</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 programming">
+                            <div>
+                                <div class="gallery-image">
+                                    <img src="{{ asset('example/gallery/08.jpg') }}" alt="">
+                                    <div class="gallery-image-links">
+                                        <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/gallery/08.jpg') }}"></a>
+                                        <a class="p-link" title="" href="gallery-single.html"></a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item-description">
+                                    <h3>
+                                        <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                    </h3>
+                                    <p class="gallery-meta">
+                                        <a href="portfolio.html">Media</a>
+                                        ,
+                                        <a href="portfolio.html">Web design</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="isotope-item gallery-item padding-item col-md-4 col-sm-6 programming">
+                            <div>
+                                <div class="gallery-image">
+                                    <img src="{{ asset('example/gallery/09.jpg') }}" alt="">
+                                    <div class="gallery-image-links">
+                                        <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ asset('example/gallery/09.jpg') }}"></a>
+                                        <a class="p-link" title="" href="gallery-single.html"></a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item-description">
+                                    <h3>
+                                        <a href="gallery-single.html">Lorem Ipsum Dolor</a>
+                                    </h3>
+                                    <p class="gallery-meta">
+                                        <a href="portfolio.html">Media</a>
+                                        ,
+                                        <a href="portfolio.html">Web design</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#"> <i class="arrow-icon-left-open-3"></i>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                        <li>
+                            <a href="#">5</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="arrow-icon-right-open-3"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

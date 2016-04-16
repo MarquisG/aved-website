@@ -1,0 +1,14 @@
+aved_calendrier:
+    path:    /calendrier.{_format}
+    defaults: { _controller: AvedBlogBundle:Default:calendrier, _format:html }
+    requirements:
+        _format: html|json|xml|ics
+        _method:  GET
+
+aved_new_event:
+    path:     /user/new-event/
+    defaults: { _controller: AvedBlogBundle:Default:newevent}
+
+aved_new_article:
+    path:     /user/new-article/
+    defaults: { _controller: AvedBlogBundle:Default:newarticle}

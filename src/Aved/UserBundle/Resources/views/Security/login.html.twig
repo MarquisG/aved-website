@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="breadcrumbs" class="grey_section bg_image">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1>
+                        <strong>Connexion</strong>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="{{ path('aved_homepage') }}">Accueil</a>
+                        </li>
+                        <li class="active">Connexion</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-push-2 to_animate">
+                <form action="{{ path("fos_user_security_check") }}" method="post">
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                    <div class="form-group"><br><br><br>
+                        <label for="username" class="col-lg-3 control-label">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
+                        <div class="col-lg-9">
+                            <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" class="form-control text-center" /><br>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-lg-3 control-label">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
+                        <div class="col-lg-9">
+                            <input type="password" id="password" name="_password" required="required" class="form-control text-center" />
+                            <div class="checkbox">
+                                <label><br>
+                                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" /> <div style="line-height:1;"> {{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    {% if error %}
+                        {{ error.message }}
+                    {% endif %}
+                    <div class="form-group">
+                    <div class="col-lg-8 col-lg-offset-3"><br>
+                        <a href="{{ path('fos_user_resetting_request') }}"><u>Mot de passe oublié</u></a><br><br>
+                    </div>
+                </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-3"><br>
+                            <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" class="theme_button" />
+                            <br><br><br>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

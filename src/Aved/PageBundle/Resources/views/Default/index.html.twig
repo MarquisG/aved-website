@@ -1,0 +1,144 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section id="breadcrumbs" class="grey_section bg_image">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1><strong>Accueil</strong>
+                </h1>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="{{ path('aved_homepage') }}">Accueil</a>
+                    </li>
+                    <li class="active">Présentation</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container text-center" style="padding-top:50px;"><p><h2><strong>Association</strong> de la <strong>vie étudiante</strong> à <strong>Descartes</strong></h2></p></div>
+<section class="light_section">
+
+        <div class="row">
+            <div class="container" style="padding:50px 0 50px 0;">
+            <div class="col-sm-6">
+                <img src="{{ asset('example/gallery/15.png') }}" alt="">
+                </br></br>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Qu'est-ce que l'AVED ?</a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <p>
+                                    L’Association pour la Vie Etudiante à Descartes est née d’un besoin de communication entre les différents bureaux des étudiants du campus. Elle comprend aujourd’hui la plupart des écoles et continue de rallier les autres associations existantes. Au-delà de sa mission de communication, l’AVED est là pour promouvoir un esprit campus et donner aux étudiants une vision globale du lieu où ils étudient et parfois vivent.
+                                </p>
+                                <p>
+                                    Pendant notre première année d’existence, nous nous sommes principalement concentrés autour d’un unique événement : le Trophée Descartes, un week-end de compétition sportive où s’affrontent les écoles du campus. Cette année, nous sommes fiers de planifier sa troisième édition, avec de nouvelles écoles participantes. 
+                                </p>
+                                <p>
+                                    En plus de regrouper les informations de loisirs et d'activités extrascolaires, nous sommes aujourd’hui aussi intéressés par un partage des connaissances, une volonté qui va dans le même sens que la création de la d.School avec laquelle nous allons maintenant travailler. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed">Qui sommes nous ?</a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>
+                                    Nous sommes l’union de plusieurs écoles du campus ENSAVT, ESIEE, ENPC, ENSG, UPEM (ECO G, STAPS, IUT, EUP), ESO. L’objectif étant de pouvoir représenter l’ensemble des étudiants du campus, nous avons réunis plusieurs représentants de chaque association des écoles de la cité Descartes, mais aussi des personnes étudiants motivés et intéressés par l’avenir de notre campus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed">Pourquoi le faisons nous ?</a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>
+                                    Cette année, l’AVED a décidé d'être plus qu’une simple interface entre les associations en agissant comme moteur du développement culturel du campus en communicant directement avec les étudiants. Pour cela, un site internet ainsi qu’une application regroupant les informations relatives au campus sont en développement.
+                                </p>
+                                <p>Nos objectifs aujourd’hui sont :</p>
+                                <p>
+                                    - Donner aux étudiants une vision globale du campus<br>
+                                    - Favoriser des échanges inter-écoles<br>
+                                    - Améliorer la visibilité d'élément déjà existants<br>
+                                    - Organiser de nouveaux événements
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="pages" class="light_section bottom_section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="teaser teaser_icon to_animate" data-animation="fadeInDown">
+                    <i class="rt-icon-diamond2"></i>
+                    <h4>
+                        <a href="#">
+                            <strong>A propos</strong>
+                            de nous
+                        </a>
+                    </h4>
+                    <p>Contactez notre équipe</p>
+                    <p class="teaser_button">
+                        <a href="{{ path('aved_contact') }}" class="theme_button">Contact</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="teaser teaser_icon to_animate" data-animation="fadeInDown">
+                    <i class="rt-icon-camera2"></i>
+                    <h4>
+                        <a href="#">
+                            <strong>Notre</strong>
+                            Galerie
+                        </a>
+                    </h4>
+                    <p>Venez voir nos photos</p>
+                    <p class="teaser_button">
+                        <a href="{{ path('aved_galerie') }}" class="theme_button">Galerie</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="teaser teaser_icon to_animate" data-animation="fadeInDown">
+                    <i class="rt-icon-tag2"></i>
+                    <h4>
+                        <a href="#">
+                            <strong>Page</strong>
+                            Facebook
+                        </a>
+                    </h4>
+                    <p>Visitez notre page</p>
+                    <p class="teaser_button">
+                        <a href="https://www.facebook.com/AVEDescartes?fref=ts" class="theme_button">Facebook</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</section>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="breadcrumbs" class="grey_section bg_image">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1>
+                        Page <strong>News</strong>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="{{ path('aved_homepage') }}">Accueil</a>
+                        </li>
+                        <li class="active">News</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="content" class="light_section blog left-sidebar">
+        <div class="container">
+            <div class="row">
+                <!-- main content -->
+                <div class="col-sm-8 col-md-8 col-lg-9 col-sm-push-4 col-md-push-4 col-lg-push-3">
+                    {% for article in pagination %}
+                        <article class="side-item events-grid to_animate">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="item-media">
+                                        <img src="{{ asset(''~article.thumbnail) }}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="item-content right">
+                                        <h2>
+                                            <a href="{{ path('aved_news_detail', {id:article.id}) }}">{{ article.title }}</a>
+                                        </h2>
+                                        <p>
+                                            {{ article.description|length > 200 ? article.description|slice(0, 200) ~ '...' : article.description }}
+                                        </p>
+                                        <div class="entry-tags">
+                                            <span class="event-date grey"> <i class="rt-icon-calendar3 highlight"></i>
+                                                <time datetime="2013-04-06T15:05:23+00:00">Posté le {{ article.date|date("d/m/y") }}</time>
+                                            </span>
+                                            <span class="event-place grey"> <i class="rt-icon-location highlight"></i>
+                                                Par <a rel="category" href="#">{{ article.user.school.name }}</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    {% endfor %}<br>
+                    <div class="navigation text-center">
+                        {% do pagination.setTemplate('AvedBlogBundle:Default:pagination.html.twig') %}
+                        {{ knp_pagination_render(pagination) }}
+                    </div>
+                </div>
+                <!--eof col-sm-9 (main content)-->
+                <!-- Sidebar -->
+                <aside class="col-sm-4 col-md-4 col-lg-3 col-sm-pull-8 col-md-8 col-lg-pull-9">
+                    <div class="widget widget_categories">
+                        <h3 class="widget-title">Events sur la page</h3>
+                        <ul>
+                            {% for article in pagination %}
+                                <li>
+                                    {% if article.event != null %}
+                                        <a href="{{ path('aved_event_detail', {id:article.event.id}) }}" title="">{{ article.event.title }}</a>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </aside>
+                <!-- eof sidebar --> 
+            </div>
+        </div>
+    </section>
+{% endblock %}
