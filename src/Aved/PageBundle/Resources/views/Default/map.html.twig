@@ -1,37 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<div id="map-canvas"></div>
-{% endblock %}
-
-{% block javascripts %}
-	<script type="text/javascript"
-    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG5AQ8AiFJBoiwhKIKTVlgvzQbIplmnFE">
-    </script>
-    <script type="text/javascript">
-      	var map;
-      	function initialize() {
-	        var mapOptions = {
-	          	center: { lat: 48.838966, lng: 2.590477},
-	          	zoom: 16,
-	          	disableDefaultUI: true,
-	          	panControl: false,
-	          	zoomControl: true,
-	          	mapTypeControl: false,
-	          	scaleControl: true,
-	          	scrollwheel: false,
-	          	streetViewControl: true,
-	          	overviewMapControl: false,
-	          	zoomControlOptions: google.maps.ZoomControlStyle.DEFAULT,
-	          	mapTypeId: google.maps.MapTypeId.HYBRID
-	        };
-	        if(document.getElementById('map-canvas')) {
-	          	map = new google.maps.Map(document.getElementById('map-canvas'),
-	              	mapOptions);
-	          	put_event_markers(map);
-	          	put_campus_markers(map);
-	        }
-     	}
-     	google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+	<div style="overflow:hidden;padding-bottom:40%;position:relative;height:0;">
+		<iframe style="left:0;top:0;height:100%;width:100%;position:absolute;"src="https://www.google.com/maps/d/u/1/embed?mid=zbFCyfNKO_Mw.k6A69hFG8jWM" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+	</div>
 {% endblock %}
