@@ -18,19 +18,11 @@ class DefaultController extends Controller
     	$event_json = array();
 
     	foreach ($event_list as $event) {
-            if($event->getUser()->getSchool() == null)
-            {
-                $color = '#2DB4E0';
-                $user = '';
-            }
-            else
-            {
-                $color = $event->getUser()->getSchool()->getColor();
-                $user = $event->getUser()->getSchool()->getName().' - ';
-            }
+            if($event->getUser()->getSchool() == null) $color = '#2DB4E0';
+            else $color = $event->getUser()->getSchool()->getColor();
     		$event_json[] = array(
                 'id'        => $event->getId(),
-                'title'     => $user.$event->getTitle(),
+                'title'     => $event->getTitle(),
                 'start'     => $event->getStart()->format('Y-m-d H:i:s'),
                 'end'       => $event->getEnd()->format('Y-m-d H:i:s'),
                 'allDay'    => false,
