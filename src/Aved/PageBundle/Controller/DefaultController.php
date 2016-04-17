@@ -16,7 +16,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $paginator  = $this->get('knp_paginator');
-        $query = $em->getRepository('AvedBlogBundle:Event')->findAllOrdered();
+        $query = $em->createQuery('SELECT u FROM Aved\BlogBundle\Entity\Event u ORDER BY u.start DESC');
         $pagination = $paginator->paginate(
             $query, /* query NOT result */
             $request->query->getInt('page', 1)/*page number*/,
@@ -45,7 +45,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $paginator  = $this->get('knp_paginator');
-        $query = $em->getRepository('AvedBlogBundle:Article')->findAllOrdered();
+        $query = $em->createQuery('SELECT u FROM Aved\BlogBundle\Entity\Article u ORDER BY u.date DESC');
         $pagination = $paginator->paginate(
             $query, /* query NOT result */
             $request->query->getInt('page', 1)/*page number*/,
