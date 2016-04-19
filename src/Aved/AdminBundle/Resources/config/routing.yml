@@ -1,0 +1,11 @@
+aved_admin_homepage:
+    path:     /admin/
+    defaults: { _controller: AvedAdminBundle:Default:index }
+
+aved_admin_new_event:
+    path:     /admin/new-event/
+    defaults: { _controller: AvedAdminBundle:Default:newevent}
+
+aved_admin_new_article:
+    path:     /admin/new-article/
+    defaults: { _controller: AvedAdminBundle:Default:newarticle}

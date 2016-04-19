@@ -1,0 +1,50 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}- Panel d'Administration{% endblock %}
+
+{% block body %}
+    <section id="breadcrumbs" class="grey_section bg_image">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1>
+                        Panel d'<strong>Administration</strong>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="{{ path('aved_homepage') }}">Accueil</a>
+                        </li>
+                        <li class="active">Panel d'Administration</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid text-center">
+        <div class="row"><br>
+            <div class="col-md-3">
+                <h1>Bons Plans</h1><br>
+                <button type="button" class="btn btn-success btn-lg btn-block"><a style="color:white" href="#">Ajouter un bon plan</a></button>
+                <button type="button" class="btn btn-info btn-lg btn-block"><a style="color:white" href="#">Modifier un bon plan</a></button>
+                <button type="button" class="btn btn-danger btn-lg btn-block"><a style="color:white" href="#">Supprimer un bon plan</a></button>
+            </div>
+            <div class="col-md-3">
+                <h1>Evénements</h1><br>
+                <a style="color:white" href="{{ path('aved_admin_new_event') }}"><button type="button" class="btn btn-success btn-lg btn-block">Créer un événement</button></a>
+                <a style="color:white" href="#"><button type="button" class="btn btn-info btn-lg btn-block">Modifier un événement</button></a>
+                <a style="color:white" href="#"><button type="button" class="btn btn-danger btn-lg btn-block">Supprimer un événement</button></a>
+            </div>
+            <div class="col-md-3">
+                <h1>News</h1><br>
+                <a style="color:white" href="{{ path('aved_admin_new_article') }}"><button type="button" class="btn btn-success btn-lg btn-block">Créer une news</button></a>
+                <a style="color:white" href="#"><button type="button" class="btn btn-info btn-lg btn-block">Modifier une news</button></a>
+                <a style="color:white" href="#"><button type="button" class="btn btn-danger btn-lg btn-block">Supprimer une news</button></a>
+            </div>
+            <div class="col-md-3">
+                <h1>Utilisateur</h1><br>
+                <a style="color:white" href="#"><button type="button" class="btn btn-info btn-lg btn-block"><a style="color:white" href="#">Modifier les droits utilisateur</button></a>
+                <a style="color:white" href="#"><button type="button" class="btn btn-danger btn-lg btn-block">Supprimer un utilisateur</button></a>
+            </div>
+        </div><br>
+    </div>
+{% endblock %}

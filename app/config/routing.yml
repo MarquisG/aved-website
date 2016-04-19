@@ -1,3 +1,7 @@
+aved_admin:
+    resource: "@AvedAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
 aved_blog:
     resource: "@AvedBlogBundle/Resources/config/routing.yml"
     prefix:   /

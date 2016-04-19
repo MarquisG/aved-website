@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Aved\UserBundle\AvedUserBundle(),
             new Aved\PageBundle\AvedPageBundle(),
             new Aved\BlogBundle\AvedBlogBundle(),
+            new Aved\AdminBundle\AvedAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
